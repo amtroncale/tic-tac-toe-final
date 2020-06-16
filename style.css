@@ -1,19 +1,27 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #board {
-    padding-top: 3em;
     text-align: center;
 }
 
 .row > div {
-    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100px;
     width: 100px; 
-    font-size: 75px;
-    line-height: 100px;
+    font-size: 25px;
+
     cursor: pointer;
 }
 
 .row {
-    clear: both;
+    display: flex;
     margin: 0 auto;
     width: 302px;
 }

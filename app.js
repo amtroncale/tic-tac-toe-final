@@ -1,7 +1,7 @@
 const cells = document.querySelectorAll('.row > div');
 
 for (let i = 0; i < cells.length; i++) {
-    cells[i].addEventListener('click');
+    cells[i].addEventListener('click', cellClicked);
 }
 
 let currentPlayer = 'x';
@@ -12,7 +12,7 @@ let moves = 0;
 function cellClicked(e) {
 
     if(isGameOver) {
-        resetGame;
+        resetGame();
         return;
     }
 
@@ -20,7 +20,7 @@ function cellClicked(e) {
         return;
     }
 
-        e.target.textConstant = currentPlayer;
+        e.target.textContent = currentPlayer;
         moves++;
 
         checkWinner();
@@ -113,7 +113,7 @@ function resetGame() {
     isGameOver = false;
     moves = 0;
     currentPlayer = 'x';
-    for (let i = o; i < cells.length; i++) {
+    for (let i = 0; i < cells.length; i++) {
         cells[i].textContent = '';
     }
 }
